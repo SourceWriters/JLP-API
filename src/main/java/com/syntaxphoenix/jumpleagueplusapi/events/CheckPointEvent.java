@@ -14,14 +14,13 @@ import org.bukkit.event.HandlerList;
  */
 public class CheckPointEvent extends Event implements Cancellable {
 	
-	public static final HandlerList handlers = new HandlerList();
+	public static HandlerList handlers = new HandlerList();
 	
-	private boolean cancelled;
+	private boolean cancelled = false;
 	private Player player;
 	private int checkpoint;
 	
 	public CheckPointEvent(Player player, int checkpoint) {
-		this.cancelled = false;
 		this.player = player;
 		this.checkpoint = checkpoint;
 	}

@@ -14,13 +14,12 @@ import org.bukkit.event.HandlerList;
  */
 public class GameStartEvent extends Event implements Cancellable {
 	
-	public static final HandlerList handlers = new HandlerList();
+	public static HandlerList handlers = new HandlerList();
 	
-	private boolean cancelled;
+	private boolean cancelled = false;
 	private int users;
 
 	public GameStartEvent(int users) {
-		this.cancelled = false;
 		this.users = users;
 	}
 

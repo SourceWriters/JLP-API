@@ -13,15 +13,14 @@ import org.bukkit.event.HandlerList;
  */
 public class DeathEvent extends Event implements Cancellable {
 	
-	public static final HandlerList handlers = new HandlerList();
+	public static HandlerList handlers = new HandlerList();
 	
-	private boolean cancelled;
+	private boolean cancelled = false;
 	private Player player;
 	private Player killer;
 	private int lives;
 	
 	public DeathEvent(Player player, Player killer, int lives) {
-		this.cancelled = false;
 		this.player = player;
 		this.killer = killer;
 		this.lives = lives;

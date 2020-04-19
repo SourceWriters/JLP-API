@@ -14,13 +14,12 @@ import org.bukkit.event.HandlerList;
  */
 public class GameEndEvent extends Event implements Cancellable {
 	
-	public static final HandlerList handlers = new HandlerList();
+	public static HandlerList handlers = new HandlerList();
 	
-	private boolean cancelled;
+	private boolean cancelled = false;
 	private Player winner;
 	
 	public GameEndEvent(Player winner) {
-		this.cancelled = false;
 		this.winner = winner;
 	}
 
